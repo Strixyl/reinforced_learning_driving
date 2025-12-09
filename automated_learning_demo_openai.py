@@ -56,10 +56,10 @@ button_frame.pack(pady=10)
 def create_button(text, color, command):
     return tk.Button(button_frame, text=text, bg=color, fg="white", font=("Arial", 12, "bold"), width=12, command=command)
 
-start_btn = create_button("▶ Start Training", "#0f9d58", lambda: threading.Thread(target=start_training).start())
-demo_btn = create_button("🎬 Demo", "#4285f4", lambda: threading.Thread(target=demo_run).start())
-reset_btn = create_button("↺ Reset", "#5f6368", lambda: reset_env())
-newroad_btn = create_button("🛣 New Road", "#9c27b0", lambda: generate_new_road())
+start_btn = create_button(" Start Training", "#0f9d58", lambda: threading.Thread(target=start_training).start())
+demo_btn = create_button(" Demo", "#4285f4", lambda: threading.Thread(target=demo_run).start())
+reset_btn = create_button(" Reset", "#5f6368", lambda: reset_env())
+newroad_btn = create_button(" New Road", "#9c27b0", lambda: generate_new_road())
 
 for btn in [start_btn, demo_btn, reset_btn, newroad_btn]:
     btn.pack(side=tk.LEFT, padx=5)
