@@ -91,12 +91,10 @@ class RLDrivingGUI:
     def draw_road(self):
         self.road_canvas.delete("all")
         cell_w, lane_h = 50, 50
-        
         for lane in range(self.NUM_LANES):
             y = 40 + lane * lane_h
             self.road_canvas.create_line(50, y - 20, 50 + self.ROAD_LENGTH * cell_w, y - 20, 
                                         fill="#4a4a6a", width=2, dash=(5, 5))
-        
         for pos in range(self.ROAD_LENGTH):
             x = 50 + pos * cell_w
             for lane in range(self.NUM_LANES):
